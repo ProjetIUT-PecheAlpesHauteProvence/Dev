@@ -1,5 +1,12 @@
 <?php
 
+
+/*LINKS
+	echo $this->html->link('S\'enregistrer' , array('plugin' => 'users', 'controller' => 'users', 'action' => 'add'));
+	echo $this->html->link('Forgot' , array('plugin' => 'users', 'controller' => 'users', 'action' => 'forgot'));
+*/
+
+
 App::uses('CakeEmail', 'Network/Email');
 App::uses('UsersAppController', 'Users.Controller');
 
@@ -352,6 +359,10 @@ class UsersController extends UsersAppController {
 			$this->request->data['User']['username'] = htmlspecialchars($this->request->data['User']['username']);
 			$this->request->data['User']['website'] = htmlspecialchars($this->request->data['User']['website']);
 			$this->request->data['User']['name'] = htmlspecialchars($this->request->data['User']['name']);
+			$this->request->data['User']['firstname'] = htmlspecialchars($this->request->data['User']['firstname']);
+			$this->request->data['User']['street'] = htmlspecialchars($this->request->data['User']['street']);
+			$this->request->data['User']['zipcode'] = htmlspecialchars($this->request->data['User']['zipcode']);
+			$this->request->data['User']['city'] = htmlspecialchars($this->request->data['User']['city']);
 			if ($this->User->save($this->request->data)) {
 				Croogo::dispatchEvent('Controller.Users.registrationSuccessful', $this);
 				$this->request->data['User']['password'] = null;

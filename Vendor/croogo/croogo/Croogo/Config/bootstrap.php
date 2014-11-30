@@ -25,3 +25,5 @@ Configure::write('Croogo.installed',
 if (!Configure::read('Croogo.installed') || !Configure::read('Install.secured')) {
 	CakePlugin::load('Install', array('routes' => true));
 }
+
+setlocale(LC_ALL, 'fra');

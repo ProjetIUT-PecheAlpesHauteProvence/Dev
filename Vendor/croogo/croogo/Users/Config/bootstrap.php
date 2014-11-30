@@ -30,3 +30,5 @@ Croogo::hookAdminRowAction('Users/admin_index', 'Reset Password', array(
 		),
 	),
 ));
+
+setlocale(LC_ALL, 'fra');

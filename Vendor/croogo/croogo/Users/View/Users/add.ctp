@@ -3,18 +3,20 @@
 	<?php echo $this->Form->create('User');?>
 		<fieldset>
 		<?php
-			echo $this->Form->input('username');
-			echo $this->Form->input('password', array('value' => ''));
-			echo $this->Form->input('verify_password', array('type' => 'password', 'value' => ''));
-			echo $this->Form->input('name');
-			echo $this->Form->input('firstname');
-			echo $this->Form->input('birthdate');
-			echo $this->Form->input('street');
-			echo $this->Form->input('zipcode');
-			echo $this->Form->input('city');
+			echo $this->Form->input('username', array('label' => 'Nom d\'utilisateur'));
+			echo $this->Form->input('password', array('value' => '','label' => 'Mot de passe'));
+			echo $this->Form->input('verify_password', array('type' => 'password', 'value' => '', 'label' => 'Conformation du Mot de passe'));
 			echo $this->Form->input('email');
-			echo $this->Form->input('website');
+			echo $this->Form->input('website', array('label' => 'Site Web'));
+			echo $this->Form->input('name', array('label' => 'Nom'));
+			echo $this->Form->input('firstname', array('label' => 'Prénom'));
+			echo $this->Form->input('birthdate', array('label' => 'Date de naissance', 'dateFormat' => 'DMY', 'minYear' => date('Y') - 100, 'maxYear' =>date('Y') - 13));
+			echo $this->Form->input('street', array('label' => 'Rue'));
+			echo $this->Form->input('zipcode', array('label' => 'Code Postal'));
+			echo $this->Form->input('city', array('label' => 'Ville'));
+
 		?>
 		</fieldset>
-	<?php echo $this->Form->end('Submit');?>
+	<?php echo $this->Form->end('S\'inscrire');?>
 </div>
+

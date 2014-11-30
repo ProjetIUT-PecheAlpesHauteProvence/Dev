@@ -54,3 +54,355 @@ Request URL: /Projet/Users
 Stack Trace:
 #0 C:\wamp\www\Projet\webroot\index.php(105): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2014-11-29 13:45:34 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /Dev/Admin
+Stack Trace:
+#0 C:\wamp\www\Dev\webroot\index.php(105): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-29 13:45:57 Error: [MissingControllerException] Controller class AddController could not be found.
+Exception Attributes: array (
+  'class' => 'AddController',
+  'plugin' => 'Users',
+)
+Request URL: /Dev/users/add
+Stack Trace:
+#0 C:\wamp\www\Dev\webroot\index.php(105): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-29 13:57:22 Error: Fatal Error (4): syntax error, unexpected 'if' (T_IF) in [C:\wamp\www\Dev\Vendor\cakephp\cakephp\lib\Cake\Config\routes.php, line 47]
+2014-11-29 13:57:22 Error: [FatalErrorException] syntax error, unexpected 'if' (T_IF)
+Request URL: /Dev/
+Stack Trace:
+#0 C:\wamp\www\Dev\Vendor\cakephp\cakephp\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\Dev...', 47)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\wamp\\www\\Dev...', 47, Array)
+#2 C:\wamp\www\Dev\Vendor\cakephp\cakephp\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\wamp\\www\\Dev...', 47, Array)
+#3 C:\wamp\www\Dev\Vendor\cakephp\cakephp\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-11-29 14:01:46 Error: [MissingControllerException] Controller class FormController could not be found.
+Exception Attributes: array (
+  'class' => 'FormController',
+  'plugin' => 'Users',
+)
+Request URL: /Dev/admin/users/form
+Stack Trace:
+#0 C:\wamp\www\Dev\webroot\index.php(105): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-29 14:01:54 Error: [MissingControllerException] Controller class FormController could not be found.
+Exception Attributes: array (
+  'class' => 'FormController',
+  'plugin' => NULL,
+)
+Request URL: /Dev/admin/form
+Stack Trace:
+#0 C:\wamp\www\Dev\webroot\index.php(105): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-29 14:02:10 Error: [MissingControllerException] Controller class FormController could not be found.
+Exception Attributes: array (
+  'class' => 'FormController',
+  'plugin' => 'Users',
+)
+Request URL: /Dev/admin/users/form
+Stack Trace:
+#0 C:\wamp\www\Dev\webroot\index.php(105): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-29 14:02:15 Error: [MissingControllerException] Controller class AdminFormController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminFormController',
+  'plugin' => 'Users',
+)
+Request URL: /Dev/admin/users/admin_form
+Stack Trace:
+#0 C:\wamp\www\Dev\webroot\index.php(105): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-29 14:02:29 Error: [MissingControllerException] Controller class IndexController could not be found.
+Exception Attributes: array (
+  'class' => 'IndexController',
+  'plugin' => 'Users',
+)
+Request URL: /Dev/admin/users/index
+Stack Trace:
+#0 C:\wamp\www\Dev\webroot\index.php(105): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-29 14:02:33 Error: [MissingControllerException] Controller class IndexController could not be found.
+Exception Attributes: array (
+  'class' => 'IndexController',
+  'plugin' => NULL,
+)
+Request URL: /Dev/admin/index
+Stack Trace:
+#0 C:\wamp\www\Dev\webroot\index.php(105): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-29 14:02:43 Error: [MissingControllerException] Controller class FormController could not be found.
+Exception Attributes: array (
+  'class' => 'FormController',
+  'plugin' => NULL,
+)
+Request URL: /Dev/admin/form
+Stack Trace:
+#0 C:\wamp\www\Dev\webroot\index.php(105): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-29 14:03:05 Error: [MissingControllerException] Controller class FormController could not be found.
+Exception Attributes: array (
+  'class' => 'FormController',
+  'plugin' => 'Users',
+)
+Request URL: /Dev/admin/users/form/add
+Stack Trace:
+#0 C:\wamp\www\Dev\webroot\index.php(105): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-29 14:03:09 Error: [MissingControllerException] Controller class AddController could not be found.
+Exception Attributes: array (
+  'class' => 'AddController',
+  'plugin' => 'Users',
+)
+Request URL: /Dev/admin/users/add
+Stack Trace:
+#0 C:\wamp\www\Dev\webroot\index.php(105): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-29 14:03:27 Error: [MissingActionException] Action UsersController::admin_form() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'admin_form',
+)
+Request URL: /Dev/admin/users/users/form
+Stack Trace:
+#0 C:\wamp\www\Dev\Vendor\croogo\croogo\Croogo\Controller\CroogoAppController.php(218): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\Dev\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php(191): CroogoAppController->invokeAction(Object(CakeRequest))
+#2 C:\wamp\www\Dev\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#3 C:\wamp\www\Dev\webroot\index.php(105): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#4 {main}
+2014-11-29 14:06:26 Error: [MissingControllerException] Controller class FormController could not be found.
+Exception Attributes: array (
+  'class' => 'FormController',
+  'plugin' => 'Menus',
+)
+Request URL: /Dev/admin/menus/form
+Stack Trace:
+#0 C:\wamp\www\Dev\webroot\index.php(105): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-29 14:09:45 Error: [MissingControllerException] Controller class DisplayController could not be found.
+Exception Attributes: array (
+  'class' => 'DisplayController',
+  'plugin' => NULL,
+)
+Request URL: /Dev/display/home
+Stack Trace:
+#0 C:\wamp\www\Dev\webroot\index.php(105): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-29 14:11:48 Error: [MissingControllerException] Controller class PagesController could not be found.
+Exception Attributes: array (
+  'class' => 'PagesController',
+  'plugin' => NULL,
+)
+Request URL: /Dev/pages/display/home
+Stack Trace:
+#0 C:\wamp\www\Dev\webroot\index.php(105): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-29 14:11:54 Error: [MissingControllerException] Controller class DisplayController could not be found.
+Exception Attributes: array (
+  'class' => 'DisplayController',
+  'plugin' => NULL,
+)
+Request URL: /Dev/display/home
+Stack Trace:
+#0 C:\wamp\www\Dev\webroot\index.php(105): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-29 14:11:58 Error: [MissingControllerException] Controller class DisplayController could not be found.
+Exception Attributes: array (
+  'class' => 'DisplayController',
+  'plugin' => 'Users',
+)
+Request URL: /Dev/users/display/home
+Stack Trace:
+#0 C:\wamp\www\Dev\webroot\index.php(105): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-29 14:21:15 Error: Fatal Error (4): syntax error, unexpected '=>' (T_DOUBLE_ARROW) in [C:\wamp\www\Dev\Vendor\croogo\croogo\Nodes\View\Nodes\promoted.ctp, line 22]
+2014-11-29 14:21:15 Error: [FatalErrorException] syntax error, unexpected '=>' (T_DOUBLE_ARROW)
+Request URL: /Dev/
+Stack Trace:
+#0 C:\wamp\www\Dev\Vendor\cakephp\cakephp\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\Dev...', 22)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\wamp\\www\\Dev...', 22, Array)
+#2 C:\wamp\www\Dev\Vendor\cakephp\cakephp\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\wamp\\www\\Dev...', 22, Array)
+#3 C:\wamp\www\Dev\Vendor\cakephp\cakephp\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-11-29 14:21:52 Error: [MissingControllerException] Controller class UsersController could not be found.
+Exception Attributes: array (
+  'class' => 'UsersController',
+  'plugin' => 'Nodes',
+)
+Request URL: /Dev/nodes/users/register
+Stack Trace:
+#0 C:\wamp\www\Dev\webroot\index.php(105): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-29 14:22:13 Error: [MissingControllerException] Controller class UsersController could not be found.
+Exception Attributes: array (
+  'class' => 'UsersController',
+  'plugin' => 'Nodes',
+)
+Request URL: /Dev/nodes/users/register
+Stack Trace:
+#0 C:\wamp\www\Dev\webroot\index.php(105): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-29 14:22:21 Error: [MissingActionException] Action UsersController::register() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'register',
+)
+Request URL: /Dev/users/users/register
+Stack Trace:
+#0 C:\wamp\www\Dev\Vendor\croogo\croogo\Croogo\Controller\CroogoAppController.php(218): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\Dev\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php(191): CroogoAppController->invokeAction(Object(CakeRequest))
+#2 C:\wamp\www\Dev\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#3 C:\wamp\www\Dev\webroot\index.php(105): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#4 {main}
+2014-11-29 14:22:37 Error: [MissingActionException] Action UsersController::register() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'register',
+)
+Request URL: /Dev/users/users/register
+Stack Trace:
+#0 C:\wamp\www\Dev\Vendor\croogo\croogo\Croogo\Controller\CroogoAppController.php(218): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\Dev\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php(191): CroogoAppController->invokeAction(Object(CakeRequest))
+#2 C:\wamp\www\Dev\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#3 C:\wamp\www\Dev\webroot\index.php(105): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#4 {main}
+2014-11-29 14:22:44 Error: [MissingControllerException] Controller class RegisterController could not be found.
+Exception Attributes: array (
+  'class' => 'RegisterController',
+  'plugin' => 'Users',
+)
+Request URL: /Dev/users/register
+Stack Trace:
+#0 C:\wamp\www\Dev\webroot\index.php(105): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-29 14:22:58 Error: [MissingControllerException] Controller class RegisterController could not be found.
+Exception Attributes: array (
+  'class' => 'RegisterController',
+  'plugin' => 'Users',
+)
+Request URL: /Dev/users/register
+Stack Trace:
+#0 C:\wamp\www\Dev\webroot\index.php(105): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-29 14:23:05 Error: [MissingActionException] Action UsersController::register() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'register',
+)
+Request URL: /Dev/users/users/register
+Stack Trace:
+#0 C:\wamp\www\Dev\Vendor\croogo\croogo\Croogo\Controller\CroogoAppController.php(218): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\Dev\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php(191): CroogoAppController->invokeAction(Object(CakeRequest))
+#2 C:\wamp\www\Dev\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#3 C:\wamp\www\Dev\webroot\index.php(105): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#4 {main}
+2014-11-29 14:23:57 Error: [MissingActionException] Action UsersController::register() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'register',
+)
+Request URL: /Dev/users/users/register
+Stack Trace:
+#0 C:\wamp\www\Dev\Vendor\croogo\croogo\Croogo\Controller\CroogoAppController.php(218): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\Dev\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php(191): CroogoAppController->invokeAction(Object(CakeRequest))
+#2 C:\wamp\www\Dev\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#3 C:\wamp\www\Dev\webroot\index.php(105): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#4 {main}
+2014-11-29 14:24:01 Error: Fatal Error (4): syntax error, unexpected ')', expecting ',' or ';' in [C:\wamp\www\Dev\Vendor\croogo\croogo\Nodes\View\Nodes\promoted.ctp, line 22]
+2014-11-29 14:24:01 Error: [FatalErrorException] syntax error, unexpected ')', expecting ',' or ';'
+Request URL: /Dev/
+Stack Trace:
+#0 C:\wamp\www\Dev\Vendor\cakephp\cakephp\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\Dev...', 22)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\wamp\\www\\Dev...', 22, Array)
+#2 C:\wamp\www\Dev\Vendor\cakephp\cakephp\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\wamp\\www\\Dev...', 22, Array)
+#3 C:\wamp\www\Dev\Vendor\cakephp\cakephp\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-11-29 14:24:11 Error: [MissingHelperException] Helper class UserHelper could not be found.
+Exception Attributes: array (
+  'class' => 'UserHelper',
+  'plugin' => 'Nodes',
+)
+Request URL: /Dev/
+Stack Trace:
+#0 C:\wamp\www\Dev\Vendor\cakephp\cakephp\lib\Cake\View\HelperCollection.php(66): HelperCollection->load('Nodes.User')
+#1 C:\wamp\www\Dev\Vendor\cakephp\cakephp\lib\Cake\View\View.php(837): HelperCollection->__isset('User')
+#2 C:\wamp\www\Dev\Vendor\croogo\croogo\Nodes\View\Nodes\promoted.ctp(22): View->__get('User')
+#3 C:\wamp\www\Dev\Vendor\cakephp\cakephp\lib\Cake\View\View.php(948): include('C:\\wamp\\www\\Dev...')
+#4 C:\wamp\www\Dev\Vendor\cakephp\cakephp\lib\Cake\View\View.php(910): View->_evaluate('C:\\wamp\\www\\Dev...', Array)
+#5 C:\wamp\www\Dev\Vendor\cakephp\cakephp\lib\Cake\View\View.php(471): View->_render('C:\\wamp\\www\\Dev...')
+#6 C:\wamp\www\Dev\Vendor\cakephp\cakephp\lib\Cake\Controller\Controller.php(954): View->render(NULL, NULL)
+#7 C:\wamp\www\Dev\Vendor\croogo\croogo\Croogo\Controller\CroogoAppController.php(355): Controller->render(NULL, NULL)
+#8 C:\wamp\www\Dev\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php(198): CroogoAppController->render()
+#9 C:\wamp\www\Dev\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(NodesController), Object(CakeRequest))
+#10 C:\wamp\www\Dev\webroot\index.php(105): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2014-11-29 14:26:03 Error: [MissingControllerException] Controller class UsersController could not be found.
+Exception Attributes: array (
+  'class' => 'UsersController',
+  'plugin' => NULL,
+)
+Request URL: /Dev/Users/Users/add
+Stack Trace:
+#0 C:\wamp\www\Dev\webroot\index.php(105): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-29 14:26:16 Error: [MissingControllerException] Controller class UsersController could not be found.
+Exception Attributes: array (
+  'class' => 'UsersController',
+  'plugin' => NULL,
+)
+Request URL: /Dev/Users/Users/add
+Stack Trace:
+#0 C:\wamp\www\Dev\webroot\index.php(105): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-29 14:26:26 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => 'Croogo',
+)
+Request URL: /Dev/dev/croogo/img/ajax/loadingAnimation.gif
+Stack Trace:
+#0 C:\wamp\www\Dev\webroot\index.php(105): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-29 14:26:32 Error: [MissingControllerException] Controller class DevController could not be found.
+Exception Attributes: array (
+  'class' => 'DevController',
+  'plugin' => NULL,
+)
+Request URL: /Dev/dev/users?%2Fusers=
+Stack Trace:
+#0 C:\wamp\www\Dev\webroot\index.php(105): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-29 14:26:37 Error: [MissingControllerException] Controller class UsersController could not be found.
+Exception Attributes: array (
+  'class' => 'UsersController',
+  'plugin' => NULL,
+)
+Request URL: /Dev/dev/users/add?%2Fusers%2Fadd=
+Stack Trace:
+#0 C:\wamp\www\Dev\webroot\index.php(105): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-29 14:26:41 Error: [MissingControllerException] Controller class UsersController could not be found.
+Exception Attributes: array (
+  'class' => 'UsersController',
+  'plugin' => NULL,
+)
+Request URL: /Dev/dev/users/register?%2Fusers%2Fregister=
+Stack Trace:
+#0 C:\wamp\www\Dev\webroot\index.php(105): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-29 14:27:58 Error: [MissingControllerException] Controller class UsersController could not be found.
+Exception Attributes: array (
+  'class' => 'UsersController',
+  'plugin' => NULL,
+)
+Request URL: /Dev/dev/users/register?%2Fusers%2Fregister=
+Stack Trace:
+#0 C:\wamp\www\Dev\webroot\index.php(105): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}

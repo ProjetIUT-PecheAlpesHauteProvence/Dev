@@ -4,7 +4,6 @@
 			echo __d('croogo', 'No items found.');
 		}
 	?>
-
 	<?php
 		foreach ($nodes as $node):
 			$this->Nodes->set($node);
@@ -19,6 +18,9 @@
 	</div>
 	<?php
 		endforeach;
+
+		echo $this->html->link('S\'enregistrer' , array('plugin' => 'users', 'controller' => 'users', 'action' => 'add'));
+		echo $this->html->link('Forgot' , array('plugin' => 'users', 'controller' => 'users', 'action' => 'forgot'));
 	?>
 
 	<div class="paging"><?php echo $this->Paginator->numbers(); ?></div>

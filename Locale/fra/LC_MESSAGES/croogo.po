@@ -1014,6 +1014,7 @@ msgstr "Nom"
 #: Contacts/View/Messages/admin_form.ctp:29
 #: Contacts/View/Messages/admin_index.ctp:63
 #: Users/View/Users/admin_form.ctp:53
+#: Users/View/Users/add.ctp
 msgid "Firstname"
 msgstr "Prénom"
 
@@ -1026,6 +1027,46 @@ msgstr "Prénom"
 #: Users/View/Users/admin_form.ctp:53
 msgid "Email"
 msgstr "Email"
+
+#: Comments/View/Comments/admin_form.ctp:45
+#: Comments/View/Comments/admin_index.ctp:44
+#: Comments/View/Elements/comments_form.ctp:30;42
+#: Contacts/View/Contacts/admin_form.ctp:37
+#: Contacts/View/Messages/admin_form.ctp:29
+#: Contacts/View/Messages/admin_index.ctp:63
+#: Users/View/Users/admin_form.ctp:53
+msgid "Street"
+msgstr "Rue"
+
+#: Comments/View/Comments/admin_form.ctp:45
+#: Comments/View/Comments/admin_index.ctp:44
+#: Comments/View/Elements/comments_form.ctp:30;42
+#: Contacts/View/Contacts/admin_form.ctp:37
+#: Contacts/View/Messages/admin_form.ctp:29
+#: Contacts/View/Messages/admin_index.ctp:63
+#: Users/View/Users/admin_form.ctp:53
+msgid "Zipcode"
+msgstr "Code postal"
+
+#: Comments/View/Comments/admin_form.ctp:45
+#: Comments/View/Comments/admin_index.ctp:44
+#: Comments/View/Elements/comments_form.ctp:30;42
+#: Contacts/View/Contacts/admin_form.ctp:37
+#: Contacts/View/Messages/admin_form.ctp:29
+#: Contacts/View/Messages/admin_index.ctp:63
+#: Users/View/Users/admin_form.ctp:53
+msgid "City"
+msgstr "Ville"
+
+#: Comments/View/Comments/admin_form.ctp:45
+#: Comments/View/Comments/admin_index.ctp:44
+#: Comments/View/Elements/comments_form.ctp:30;42
+#: Contacts/View/Contacts/admin_form.ctp:37
+#: Contacts/View/Messages/admin_form.ctp:29
+#: Contacts/View/Messages/admin_index.ctp:63
+#: Users/View/Users/admin_form.ctp:53
+msgid "Birthdate"
+msgstr "Date de naissance"
 
 #: Comments/View/Comments/admin_form.ctp:46
 #: Comments/View/Elements/comments_form.ctp:35;43
@@ -3622,7 +3663,7 @@ msgstr "Déconnexion réussie"
 
 #: Users/Controller/UsersController.php:346
 msgid "Register"
-msgstr "S'enregistrer"
+msgstr "Inscription"
 
 #: Users/Controller/UsersController.php:369
 msgid ""
@@ -3632,7 +3673,7 @@ msgstr ""
 "Votre compte a été créé avec succès. Un email contenant les instructions à "
 "suivre vous a été envoyé."
 
-#: Users/Controller/UsersController.php:393 Users/View/Users/index.ctp:4
+#: Users/Controller/UsersController.php:393 
 msgid "You are currently logged in as:"
 msgstr "Vous êtes actuellement loggué en tant que:"
 

@@ -5,6 +5,7 @@ if (file_exists(APP . 'Vendor/autoload.php')) {
 	spl_autoload_unregister(array('App', 'load'));
 	spl_autoload_register(array('App', 'load'), true, true);
 }
+setlocale(LC_ALL, 'fra');
 
 /**
  * This file is loaded automatically by the app/webroot/index.php file after the core bootstrap.php
