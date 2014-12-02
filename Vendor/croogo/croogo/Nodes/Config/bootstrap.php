@@ -42,3 +42,6 @@ Croogo::mergeConfig('Translate.models.Node', array(
 	),
 	'translateModel' => 'Nodes.Node',
 ));
+
+
+setlocale(LC_ALL, 'fra');
