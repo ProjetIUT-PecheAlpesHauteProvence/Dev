@@ -1027,6 +1027,7 @@ INSERT INTO `types_vocabularies` (`id`, `type_id`, `vocabulary_id`, `weight`) VA
 --
 -- Structure de la table `users`
 --
+-- Commentaire
 
 CREATE TABLE IF NOT EXISTS `users` (
   `id` int(20) NOT NULL AUTO_INCREMENT,
