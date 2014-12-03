@@ -1,7 +1,7 @@
 <div class="users form">
-	<h2><?php echo $title_for_layout; ?></h2>
+	<h2><?php echo $title_for_layout; ?></h2><fieldset>
 	<?php echo $this->Form->create('User');?>
-		<fieldset>
+		
 		<?php
 			echo $this->Form->input('username', array('label' => 'Nom d\'utilisateur'));
 			echo $this->Form->input('password', array('value' => '','label' => 'Mot de passe'));
@@ -17,7 +17,7 @@
 			echo $this->Form->input('city', array('label' => 'Ville'));
 
 		?>
-		</fieldset>
-	<?php echo $this->Form->end('S\'inscrire');?>
+		
+	<?php echo $this->Form->end('S\'inscrire');?></fieldset>
 </div>
 

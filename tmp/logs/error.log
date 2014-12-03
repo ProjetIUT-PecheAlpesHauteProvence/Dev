@@ -629,3 +629,5 @@ Stack Trace:
 #4 [internal function]: App::shutdown()
 #5 {main}
 2014-12-03 07:41:00 Error: Error sending user activation notification : mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set()
+2014-12-03 08:14:22 Error: Error sending user activation notification : mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set()
+2014-12-03 08:15:32 Error: Error sending user activation notification : mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set()
