@@ -5,8 +5,9 @@
 		<?php
 			echo $this->Form->input('username', array('label' => 'Nom d\'utilisateur'));
 			echo $this->Form->input('password', array('value' => '','label' => 'Mot de passe'));
-			echo $this->Form->input('verify_password', array('type' => 'password', 'value' => '', 'label' => 'Conformation du Mot de passe'));
+			echo $this->Form->input('verify_password', array('type' => 'password', 'value' => '', 'label' => 'Confirmation du Mot de passe'));
 			echo $this->Form->input('email');
+			echo $this->Form->input('verify_email', array('label' => 'Confirmation de l\'Email'));
 			echo $this->Form->input('website', array('label' => 'Site Web'));
 			echo $this->Form->input('name', array('label' => 'Nom'));
 			echo $this->Form->input('firstname', array('label' => 'Prénom'));

@@ -56,38 +56,67 @@ class User extends UsersAppModel {
 		'username' => array(
 			'isUnique' => array(
 				'rule' => 'isUnique',
-				'message' => 'The username has already been taken.',
+				'message' => 'Ce nom d\'utilisateur déjà utilisé !',
 				'last' => true,
 			),
 			'notEmpty' => array(
 				'rule' => 'notEmpty',
-				'message' => 'This field cannot be left blank.',
+				'message' => 'Veuillez renseigner votre nom d\'utilisateur !',
 				'last' => true,
 			),
 			'validAlias' => array(
-				'rule' => 'validAlias',
-				'message' => 'This field must be alphanumeric',
+				'rule' => '/^[a-zA-Z\-_0-9]+$/',
+				'message' => 'Caractères autorisés :chiffres ,lettres, -, _',
 				'last' => true,
 			),
 		),
 		'email' => array(
 			'email' => array(
 				'rule' => 'email',
-				'message' => 'Please provide a valid email address.',
+				'message' => 'Addresse Email invalide !',
 				'last' => true,
 			),
 			'isUnique' => array(
 				'rule' => 'isUnique',
-				'message' => 'Email address already in use.',
+				'message' => 'Adresse Email déjà utilisé !',
+				'last' => true,
+			),
+			'notEmpty' => array(
+				'rule' => 'notEmpty',
+				'message' => 'Veuillez renseigner votre email !',
 				'last' => true,
 			),
 		),
+		'verify_email' => array(
+	    	'verify_email-rule-1' => array(
+	            'rule' => 'notEmpty',
+	            'message' => 'Veuillez confirmer votre mail !',
+	            
+	        ),
+	    	'verify_email-rule-2' => array(
+	            'rule' => array('equaltofield','email'),
+	            'message' => 'Le mail et la confirmation du mail doivent être identiques !',
+				//'on' => 'create', // Limit validation to 'create' or 'update' operations
+				
+            ),
+        ),
 		'password' => array(
-			'rule' => array('minLength', 6),
-			'message' => 'Passwords must be at least 6 characters long.',
+			'lenght' => array(
+				'rule' => array('minLength', 6),
+				'message' => 'Passwords must be at least 6 characters long.',
+			),
+			'pattern' => array(
+                'rule'     => '/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,16}$/',
+                'message'  => 'Le mot de passe doit contenir au moins une majuscule, une minuscule et un chiffre !',
+                
+            ),
 		),
 		'verify_password' => array(
-			'rule' => 'validIdentical',
+			/*'rule' => 'validIdentical',
+			'message' => 'Le mot de passe et la confirmation du mot de passe doivent être identiques !',*/
+			'rule' => array('equaltofield','password'),
+            'message' => 'Le mot de passe et la confirmation du mot de passe doivent être identiques !',
+				
 		),
 		'name' => array(
 			'notEmpty' => array(
@@ -95,11 +124,16 @@ class User extends UsersAppModel {
 				'message' => 'This field cannot be left blank.',
 				'last' => true,
 			),
-			'validName' => array(
-				'rule' => 'validName',
-				'message' => 'This field must be alphanumeric',
-				'last' => true,
-			),
+			'lastname-rule-2' => array(
+                'rule'     => '/^[a-zA-Z\-\s]+$/',
+                'message'  => 'Lettres uniquement !',
+                
+            ),
+            'lastname-rule-3' => array(
+                'rule'    => array('between', 2, 30),
+                'message' => 'Nom entre 2 et 30 caractères',
+                
+            ),
 		),
 		'firstname' => array(
 			'notEmpty' => array(
@@ -107,11 +141,16 @@ class User extends UsersAppModel {
 				'message' => 'This field cannot be left blank.',
 				'last' => true,
 			),
-			'validFirstname' => array(
-				'rule' => 'validName',
-				'message' => 'This field must be alphanumeric',
-				'last' => true,
-			),
+			'firstname-rule-2' => array(
+                'rule'     => '/^[a-zA-Z\-\s]+$/',
+                'message'  => 'Lettres uniquement !',
+                
+            ),
+	        'firstname-rule-3' => array(
+                'rule'    => array('between', 2, 30),
+                'message' => 'Prénom entre 2 et 30 caractères',
+                
+            ),
 		),
 		'website' => array(
 			'url' => array(
@@ -120,6 +159,51 @@ class User extends UsersAppModel {
 				'allowEmpty' => true,
 			),
 		),
+		'street' => array(
+        	'street-rule-1' => array(
+	            'rule' => 'notEmpty',
+	            'message' => 'Veuillez renseigner votre rue !',
+	            
+	        ),
+            'street-rule-2' => array(
+                'rule'     => '/^[a-zA-Z\-\s0-9\']+$/',
+                'message'  => 'Chiffres et lettres uniquement !',
+                
+            ),
+            'street-rule-3' => array(
+                'rule'    => array('between', 3, 50),
+                'message' => 'Rue entre 3 et 50 caractères',
+                
+        	),
+     	),
+        'zipcode' => array(
+        	'zipcode-rule-1' => array(
+	            'rule' => 'notEmpty',
+	            'message' => 'Veuillez renseigner votre code postal !',
+	            
+	        ),
+            'zipcode-rule-2' => array(
+                'rule'     => '/^[0-9]{5}$/',
+                'message'  => '5 Chiffres uniquement !',
+                
+            ),
+     	),
+    	'city' => array(
+	    	'city-rule-1' => array(
+	            'rule' => 'notEmpty',
+	            'message' => 'Veuillez renseigner votre ville !',
+	            
+	        ),
+	        'city-rule-2' => array(
+                'rule'     => '/^[a-zA-Z\-\s]+$/',
+                'message'  => 'Lettres uniquement !',
+                
+            ),
+	        'city-rule-3' => array(
+                'rule'    => array('between', 3, 30),
+                'message' => 'Ville entre 3 et 30 caractères',
+       		),
+       	),
 	);
 
 /**
@@ -146,10 +230,10 @@ class User extends UsersAppModel {
 		'firstname',
 		'status' => array('type' => 'boolean'),
 		'email',
-		'birthdate',
+		/*'birthdate',
 		'street',
 		'zipcode',
-		'city'
+		'city'*/
 	);
 
 /**
@@ -165,6 +249,10 @@ class User extends UsersAppModel {
 		'email',
 		'website',
 		'status',
+		'birthdate',
+		'street',
+		'zipcode',
+		'city'
 	);
 
 /**
@@ -218,6 +306,21 @@ class User extends UsersAppModel {
 		if (!empty($this->data[$this->alias]['password'])) {
 			$this->data[$this->alias]['password'] = AuthComponent::password($this->data[$this->alias]['password']);
 		}
+		if (!empty($this->data[$this->alias]['email'])) {
+			$this->data[$this->alias]['email'] = $this::lowerCase($this->data[$this->alias]['email']);
+		}
+		if (!empty($this->data[$this->alias]['name'])) {
+			$this->data[$this->alias]['name'] = $this::titleCase($this->data[$this->alias]['name']);
+		}
+		if (!empty($this->data[$this->alias]['firstname'])) {
+			$this->data[$this->alias]['firstname'] = $this::ucname($this->data[$this->alias]['firstname']);
+		}
+		if (!empty($this->data[$this->alias]['street'])) {
+			$this->data[$this->alias]['street'] = $this::ucname($this->data[$this->alias]['street']);
+		}
+		if (!empty($this->data[$this->alias]['city'])) {
+			$this->data[$this->alias]['city'] = $this::ucname($this->data[$this->alias]['city']);
+		}
 		return true;
 	}
 
@@ -246,5 +349,48 @@ class User extends UsersAppModel {
 		}
 		return true;
 	}
+
+	//Met une majuscule sur tous les caractères suivant un espace blanc ou un tiret dans la chaine
+    public function ucname($string) {
+        $string =ucwords(strtolower($string));
+
+        foreach (array('-', '\'') as $delimiter) {
+          if (strpos($string, $delimiter)!==false) {
+            $string =implode($delimiter, array_map('ucfirst', explode($delimiter, $string)));
+          }
+        }
+        return $string;
+    }
+
+    //Met une chaine en majuscule
+    public function titleCase($string){
+      return strtoupper($string);
+    }
+
+    //Met une chaine en minuscule
+    public function lowerCase($string){
+      return strtolower($string);
+    }
+
+    /*Fonction :	Compare 2 champs
+	**Appel : 		'rule' => array('equaltofield','champAComparerAuChampActuel')
+	**Retour : 		True si égaux, false si différents
+	**Exemple :		Pour comparer une confirmation de password avec un password 
+	**				'repassword' => array(
+		        	    'rule' => array('equaltofield','password'),
+	            		'message' => 'Le mot de passe et la confirmation du mot de passe doivent être identiques !',
+						'on' => 'create', // Limit validation to 'create' or 'update' operations
+	        		)
+		*/
+	public function equaltofield($check,$otherfield)
+    {
+        //get name of field
+        $fname = '';
+        foreach ($check as $key => $value){
+            $fname = $key;
+            break;
+        }
+        return $this->data[$this->name][$otherfield] === $this->data[$this->name][$fname];
+    } 
 
 }

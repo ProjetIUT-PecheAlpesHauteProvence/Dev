@@ -57,7 +57,20 @@ $this->append('tab-content');
 		)) .
 		$this->Form->input('website', array(
 			'label' => __d('croogo', 'Website'),
-		));
+		)).
+		$this->Form->input('birthdate', array(
+			'label' => __d('croogo', 'Date de naissance'),
+			'dateFormat' => 'DMY',
+		)) .
+		$this->Form->input('street', array(
+			'label' => __d('croogo', 'Rue'),
+		)) .
+		$this->Form->input('zipcode', array(
+			'label' => __d('croogo', 'Code Postal'),
+		)) .
+		$this->Form->input('city', array(
+			'label' => __d('croogo', 'Ville'),
+		)) ;
 	echo $this->Html->tabEnd();
 
 	echo $this->Croogo->adminTabs();
