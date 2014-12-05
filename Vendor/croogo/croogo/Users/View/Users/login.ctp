@@ -8,4 +8,6 @@
 		?>
 		</fieldset>
 	<?php echo $this->Form->end('Submit');?>
+
+	<?= $this->html->link('TEST' , array('plugin' => 'nodes', 'controller' => 'nodes', 'action' => 'promoted')); ?>
 </div>

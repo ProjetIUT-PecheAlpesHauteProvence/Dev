@@ -450,7 +450,88 @@ class UsersController extends UsersAppController {
  * @access public
  */
 	public function edit() {
-	}
+          $this->set('title_for_layout', 'Mon Compte');
+        
+            $id = $this->Auth->user('id');
+
+
+        if (!$id) {
+            throw new NotFoundException(__('Invalid user'));
+        }
+
+        $user = $this->User->findById($id);
+        if (!$user) {
+            throw new NotFoundException(__('Invalid user'));
+        }
+
+        
+
+        if ($this->request->is(array('post', 'put'))) {
+            $this->User->id = $id;
+
+
+
+            
+
+            if ($this->User->save($this->request->data)) {
+                $this->Session->setFlash(__('Votre compte a bien été sauvegardé.'));
+                return $this->redirect(array('action' => 'index'));
+            }
+            $this->Session->setFlash(__('Impossible de sauvegarder vos modifications.'));
+        }
+
+        if (!$this->request->data) {
+            $this->request->data = $user;
+        }
+
+
+
+    }
+
+/**
+ * Editpassword
+ *
+ * @return void
+ * @access public
+ */
+	public function editpassword() {
+          $this->set('title_for_layout', 'Modifier mon mot de passe');
+        
+            $id = $this->Auth->user('id');
+
+
+        if (!$id) {
+            throw new NotFoundException(__('Invalid user'));
+        }
+
+        $user = $this->User->findById($id);
+        if (!$user) {
+            throw new NotFoundException(__('Invalid user'));
+        }
+
+        
+
+        if ($this->request->is(array('post', 'put'))) {
+            $this->User->id = $id;
+
+
+
+            
+
+            if ($this->User->save($this->request->data)) {
+                $this->Session->setFlash(__('Votre mot de passe a bien été sauvegardé.'));
+                return $this->redirect(array('action' => 'index'));
+            }
+            $this->Session->setFlash(__('Impossible de sauvegarder vos modifications.'));
+        }
+
+        if (!$this->request->data) {
+            $this->request->data = $user;
+        }
+
+
+
+    }
 
 /**
  * Forgot
@@ -543,12 +624,13 @@ class UsersController extends UsersAppController {
  * @access public
  */
 	public function login() {
+		
 		$this->set('title_for_layout', __d('croogo', 'Log in'));
 		if ($this->request->is('post')) {
 			Croogo::dispatchEvent('Controller.Users.beforeLogin', $this);
 			if ($this->Auth->login()) {
 				Croogo::dispatchEvent('Controller.Users.loginSuccessful', $this);
-				return $this->redirect($this->Auth->redirect());
+				return $this->redirect($this->Auth->redirect(array('plugin' => 'nodes', 'controller' => 'nodes', 'action' => 'promoted')));
 			} else {
 				Croogo::dispatchEvent('Controller.Users.loginFailure', $this);
 				$this->Session->setFlash($this->Auth->authError, 'flash', array('class' => 'error'), 'auth');
@@ -588,7 +670,7 @@ class UsersController extends UsersAppController {
 			return $this->redirect('/');
 		}
 
-		$this->set('title_for_layout', $user['User']['name']);
+		$this->set('title_for_layout', $user['User']['username']);
 		$this->set(compact('user'));
 	}
 
