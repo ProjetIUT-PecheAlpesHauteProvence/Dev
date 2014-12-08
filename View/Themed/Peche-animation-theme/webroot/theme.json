@@ -1,0 +1,18 @@
+{
+	"name" : "Theme site Fédération des Alpes de Haute-Provence pour la Pêche et la Protection du Milieu Aquatique",
+	"description" : "Theme spécialement créer pour le projet",
+	"screenshot" : "screenshot.png",
+
+	"author" : "William",
+	"authorEmail" : "guillaumejuliem@gmail.com",
+	"authorUrl" : "http://www.vidtouch.fr/",
+
+	"menus" : [
+		"main",
+		"footer"
+		],
+
+	"regions" : [
+		"right"
+		]
+}

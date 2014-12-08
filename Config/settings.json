@@ -10,7 +10,7 @@
         "locale": "fra",
         "status": 1,
         "tagline": "A CakePHP powered Content Management System.",
-        "theme": "",
+        "theme": "Peche-animation-theme",
         "timezone": "UTC",
         "title": "Croogo"
     },
