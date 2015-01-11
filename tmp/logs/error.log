@@ -1234,3 +1234,182 @@ Stack Trace:
 2014-12-05 15:03:28 Error: hurryy - controllers/Extensions/ExtensionsDashboard/admin_index denied. (cache hit)
 2014-12-05 15:03:29 Error: hurryy - controllers/Extensions/ExtensionsDashboard/admin_index denied. (cache hit)
 2014-12-05 15:03:30 Error: hurryy - controllers/Extensions/ExtensionsDashboard/admin_index denied. (cache hit)
+2014-12-08 08:09:46 Error: hurryy - controllers/Nodes/Nodes/promoted allowed. (cache miss)
+2014-12-08 08:10:34 Error: hurryy - controllers/Users/Users/index allowed. (cache miss)
+2014-12-08 08:11:38 Error: hurryy - controllers/Nodes/Nodes/promoted allowed. (cache hit)
+2014-12-08 08:11:46 Error: hurryy - controllers/Extensions/ExtensionsDashboard/admin_index denied. (cache miss)
+2014-12-08 08:11:47 Error: hurryy - controllers/Extensions/ExtensionsDashboard/admin_index denied. (cache hit)
+2014-12-08 08:11:48 Error: hurryy - controllers/Extensions/ExtensionsDashboard/admin_index denied. (cache hit)
+2014-12-08 08:11:50 Error: hurryy - controllers/Extensions/ExtensionsDashboard/admin_index denied. (cache hit)
+2014-12-08 08:11:51 Error: hurryy - controllers/Extensions/ExtensionsDashboard/admin_index denied. (cache hit)
+2014-12-08 08:11:52 Error: hurryy - controllers/Extensions/ExtensionsDashboard/admin_index denied. (cache hit)
+2014-12-08 08:11:53 Error: hurryy - controllers/Extensions/ExtensionsDashboard/admin_index denied. (cache hit)
+2014-12-08 08:11:54 Error: hurryy - controllers/Extensions/ExtensionsDashboard/admin_index denied. (cache hit)
+2014-12-08 08:11:55 Error: hurryy - controllers/Extensions/ExtensionsDashboard/admin_index denied. (cache hit)
+2014-12-08 08:11:55 Error: hurryy - controllers/Extensions/ExtensionsDashboard/admin_index denied. (cache hit)
+2014-12-08 08:11:56 Error: hurryy - controllers/Extensions/ExtensionsDashboard/admin_index denied. (cache hit)
+2015-01-01 15:00:11 Error: hurryy - controllers/Nodes/Nodes/promoted allowed. (cache miss)
+2015-01-01 15:00:22 Error: hurryy - controllers/Users/Users/logout allowed. (cache miss)
+2015-01-01 15:14:30 Error: Fatal Error (1): Call to a member function findByAlias() on a non-object in [C:\wamp\www\Dev\Vendor\croogo\croogo\Users\Controller\UsersController.php, line 684]
+2015-01-01 15:14:30 Error: [FatalErrorException] Call to a member function findByAlias() on a non-object
+Request URL: /Dev/users/users/add_post
+Stack Trace:
+#0 C:\wamp\www\Dev\Vendor\cakephp\cakephp\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\wamp\\www\\Dev...', 684)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\wamp\\www\\Dev...', 684, Array)
+#2 C:\wamp\www\Dev\Vendor\cakephp\cakephp\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\wamp\\www\\Dev...', 684, Array)
+#3 C:\wamp\www\Dev\Vendor\cakephp\cakephp\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-01-01 15:14:32 Error: Fatal Error (1): Call to a member function findByAlias() on a non-object in [C:\wamp\www\Dev\Vendor\croogo\croogo\Users\Controller\UsersController.php, line 684]
+2015-01-01 15:14:32 Error: [FatalErrorException] Call to a member function findByAlias() on a non-object
+Request URL: /Dev/users/users/add_post
+Stack Trace:
+#0 C:\wamp\www\Dev\Vendor\cakephp\cakephp\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\wamp\\www\\Dev...', 684)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\wamp\\www\\Dev...', 684, Array)
+#2 C:\wamp\www\Dev\Vendor\cakephp\cakephp\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\wamp\\www\\Dev...', 684, Array)
+#3 C:\wamp\www\Dev\Vendor\cakephp\cakephp\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-01-11 20:51:44 Error: hurryy - controllers/Nodes/Nodes/promoted allowed. (cache miss)
+2015-01-11 20:51:55 Error: hurryy - controllers/Nodes/Nodes/add denied. (cache miss)
+2015-01-11 20:52:13 Error: hurryy - controllers/Users/Users/logout allowed. (cache miss)
+2015-01-11 21:01:21 Error: [MissingControllerException] Controller class AttachmentController could not be found.
+Exception Attributes: array (
+  'class' => 'AttachmentController',
+  'plugin' => NULL,
+)
+Request URL: /Dev/attachment/attachment/add
+Stack Trace:
+#0 C:\wamp\www\Dev\webroot\index.php(105): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-01-11 21:01:47 Error: [MissingControllerException] Controller class AttachmentsController could not be found.
+Exception Attributes: array (
+  'class' => 'AttachmentsController',
+  'plugin' => NULL,
+)
+Request URL: /Dev/attachments/attachments/add
+Stack Trace:
+#0 C:\wamp\www\Dev\webroot\index.php(105): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-01-11 21:02:24 Error: [MissingControllerException] Controller class FilemanagerController could not be found.
+Exception Attributes: array (
+  'class' => 'FilemanagerController',
+  'plugin' => NULL,
+)
+Request URL: /Dev/filemanager/attachments/add
+Stack Trace:
+#0 C:\wamp\www\Dev\webroot\index.php(105): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-01-11 21:03:00 Error: [MissingControllerException] Controller class FilemanagerController could not be found.
+Exception Attributes: array (
+  'class' => 'FilemanagerController',
+  'plugin' => NULL,
+)
+Request URL: /Dev/filemanager/filemanager/add
+Stack Trace:
+#0 C:\wamp\www\Dev\webroot\index.php(105): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-01-11 21:03:19 Error: [MissingControllerException] Controller class FilemanagerController could not be found.
+Exception Attributes: array (
+  'class' => 'FilemanagerController',
+  'plugin' => NULL,
+)
+Request URL: /Dev/filemanager/attachments/add
+Stack Trace:
+#0 C:\wamp\www\Dev\webroot\index.php(105): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-01-11 21:27:52 Error: Fatal Error (4): syntax error, unexpected '(', expecting ',' or ';' in [C:\wamp\www\Dev\Vendor\croogo\croogo\FileManager\View\Attachments\add.ctp, line 6]
+2015-01-11 21:27:52 Error: [FatalErrorException] syntax error, unexpected '(', expecting ',' or ';'
+Request URL: /Dev/file_manager/attachments/add
+Stack Trace:
+#0 C:\wamp\www\Dev\Vendor\cakephp\cakephp\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\Dev...', 6)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\wamp\\www\\Dev...', 6, Array)
+#2 C:\wamp\www\Dev\Vendor\cakephp\cakephp\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\wamp\\www\\Dev...', 6, Array)
+#3 C:\wamp\www\Dev\Vendor\cakephp\cakephp\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-01-11 21:30:37 Error: Type attachment cannot be found
+2015-01-11 21:30:38 Error: [MissingActionException] Action AttachmentsController::index() could not be found.
+Exception Attributes: array (
+  'controller' => 'AttachmentsController',
+  'action' => 'index',
+)
+Request URL: /Dev/file_manager/attachments
+Stack Trace:
+#0 C:\wamp\www\Dev\Vendor\croogo\croogo\Croogo\Controller\CroogoAppController.php(218): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\Dev\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php(191): CroogoAppController->invokeAction(Object(CakeRequest))
+#2 C:\wamp\www\Dev\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(AttachmentsController), Object(CakeRequest))
+#3 C:\wamp\www\Dev\webroot\index.php(105): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#4 {main}
+2015-01-11 21:31:00 Error: [MissingActionException] Action AttachmentsController::index() could not be found.
+Exception Attributes: array (
+  'controller' => 'AttachmentsController',
+  'action' => 'index',
+)
+Request URL: /Dev/file_manager/attachments
+Stack Trace:
+#0 C:\wamp\www\Dev\Vendor\croogo\croogo\Croogo\Controller\CroogoAppController.php(218): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\Dev\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php(191): CroogoAppController->invokeAction(Object(CakeRequest))
+#2 C:\wamp\www\Dev\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(AttachmentsController), Object(CakeRequest))
+#3 C:\wamp\www\Dev\webroot\index.php(105): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#4 {main}
+2015-01-11 21:31:16 Error: Type attachment cannot be found
+2015-01-11 21:31:17 Error: [MissingActionException] Action AttachmentsController::index() could not be found.
+Exception Attributes: array (
+  'controller' => 'AttachmentsController',
+  'action' => 'index',
+)
+Request URL: /Dev/file_manager/attachments
+Stack Trace:
+#0 C:\wamp\www\Dev\Vendor\croogo\croogo\Croogo\Controller\CroogoAppController.php(218): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\Dev\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php(191): CroogoAppController->invokeAction(Object(CakeRequest))
+#2 C:\wamp\www\Dev\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(AttachmentsController), Object(CakeRequest))
+#3 C:\wamp\www\Dev\webroot\index.php(105): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#4 {main}
+2015-01-11 21:38:00 Error: Fatal Error (1): Call to a member function link() on a non-object in [C:\wamp\www\Dev\Vendor\croogo\croogo\Nodes\View\Nodes\add.ctp, line 2]
+2015-01-11 21:38:00 Error: [FatalErrorException] Call to a member function link() on a non-object
+Request URL: /Dev/nodes/nodes/add
+Stack Trace:
+#0 C:\wamp\www\Dev\Vendor\cakephp\cakephp\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\wamp\\www\\Dev...', 2)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\wamp\\www\\Dev...', 2, Array)
+#2 C:\wamp\www\Dev\Vendor\cakephp\cakephp\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\wamp\\www\\Dev...', 2, Array)
+#3 C:\wamp\www\Dev\Vendor\cakephp\cakephp\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-01-11 21:43:09 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /Dev/js/nodes.js
+Stack Trace:
+#0 C:\wamp\www\Dev\webroot\index.php(105): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-01-11 21:51:12 Error: [MissingHelperException] Helper class pageTitleHelper could not be found.
+Exception Attributes: array (
+  'class' => 'pageTitleHelper',
+  'plugin' => 'Nodes',
+)
+Request URL: /Dev/nodes/nodes/add
+Stack Trace:
+#0 C:\wamp\www\Dev\Vendor\cakephp\cakephp\lib\Cake\View\HelperCollection.php(66): HelperCollection->load('Nodes.pageTitle')
+#1 C:\wamp\www\Dev\Vendor\cakephp\cakephp\lib\Cake\View\View.php(837): HelperCollection->__isset('pageTitle')
+#2 C:\wamp\www\Dev\Vendor\croogo\croogo\Nodes\View\Nodes\add.ctp(9): View->__get('pageTitle')
+#3 C:\wamp\www\Dev\Vendor\cakephp\cakephp\lib\Cake\View\View.php(948): include('C:\\wamp\\www\\Dev...')
+#4 C:\wamp\www\Dev\Vendor\cakephp\cakephp\lib\Cake\View\View.php(910): View->_evaluate('C:\\wamp\\www\\Dev...', Array)
+#5 C:\wamp\www\Dev\Vendor\cakephp\cakephp\lib\Cake\View\View.php(471): View->_render('C:\\wamp\\www\\Dev...')
+#6 C:\wamp\www\Dev\Vendor\cakephp\cakephp\lib\Cake\Controller\Controller.php(954): View->render('C:\\wamp\\www\\Dev...', NULL)
+#7 C:\wamp\www\Dev\Vendor\croogo\croogo\Croogo\Controller\CroogoAppController.php(355): Controller->render('C:\\wamp\\www\\Dev...', NULL)
+#8 C:\wamp\www\Dev\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php(198): CroogoAppController->render()
+#9 C:\wamp\www\Dev\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(NodesController), Object(CakeRequest))
+#10 C:\wamp\www\Dev\webroot\index.php(105): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2015-01-11 21:57:32 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /Dev/js/nodes.js
+Stack Trace:
+#0 C:\wamp\www\Dev\webroot\index.php(105): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}

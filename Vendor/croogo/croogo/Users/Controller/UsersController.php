@@ -677,5 +677,4 @@ class UsersController extends UsersAppController {
 	protected function _getSenderEmail() {
 		return 'croogo@' . preg_replace('#^www\.#', '', strtolower($_SERVER['SERVER_NAME']));
 	}
-
 }

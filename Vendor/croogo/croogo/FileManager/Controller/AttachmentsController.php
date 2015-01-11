@@ -107,6 +107,12 @@ class AttachmentsController extends FileManagerAppController {
 		}
 	}
 
+	public function afterFilter() {
+        if (($this->request->isPost() || $this->request->isPut()) && empty($_POST) && empty($_FILES)) {
+            $this->Security->csrfCheck = false;
+        }
+    }
+
 /**
  * Admin index
  *
@@ -243,6 +249,38 @@ class AttachmentsController extends FileManagerAppController {
 	public function admin_browse() {
 		$this->layout = 'admin_popup';
 		$this->admin_index();
+	}
+
+
+	public function add() {
+		$this->set('title_for_layout', __d('croogo', 'Add Attachment'));
+
+		if (isset($this->request->params['named']['editor'])) {
+			$this->layout = 'admin_popup';
+		}
+
+		if ($this->request->is('post') || !empty($this->request->data)) {
+
+			if (empty($this->request->data['Attachment'])) {
+				$this->Attachment->invalidate('file', __d('croogo', 'Upload failed. Please ensure size does not exceed the server limit.'));
+				return;
+			}
+			// les reidrect a modifier
+			$this->Attachment->create();
+			if ($this->Attachment->save($this->request->data)) {
+
+				$this->Session->setFlash(__d('croogo', 'The Attachment has been saved'), 'flash', array('class' => 'success'));
+
+				if (isset($this->request->params['named']['editor'])) {
+					return $this->redirect(array('action' => 'browse'));
+				} else {
+					
+					return $this->redirect(array('action' => 'index'));
+				}
+			} else {
+				$this->Session->setFlash(__d('croogo', 'The Attachment could not be saved. Please, try again.'), 'flash', array('class' => 'error'));
+			}
+		}
 	}
 
 }
