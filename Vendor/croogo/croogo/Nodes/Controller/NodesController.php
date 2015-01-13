@@ -812,7 +812,7 @@ class NodesController extends NodesAppController {
 		$this->set(compact('parentTitle', 'roles'));
 	}
 
-
+// publication de post avec image
 	public function add($typeAlias = 'node') {
 		$Node = $this->{$this->modelClass};
 		$type = $Node->Taxonomy->Vocabulary->Type->findByAlias($typeAlias);
@@ -820,19 +820,21 @@ class NodesController extends NodesAppController {
 			$this->Session->setFlash(__d('croogo', 'Content type does not exist.'));
 			return $this->redirect(array('action' => 'create'));
 		}
-
 		if (!empty($this->request->data)) {
 			if (isset($this->request->data[$Node->alias]['type'])) {
 				$typeAlias = $this->request->data[$Node->alias]['type'];
 				$Node->type = $typeAlias;
 			}
-			if ($Node->saveNode($this->request->data, $typeAlias)) {
-				Croogo::dispatchEvent('Controller.Nodes.afterAdd', $this, array('data' => $this->request->data));
-				$this->Session->setFlash(__d('croogo', '%s has been saved', $type['Type']['title']), 'flash', array('class' => 'success'));
-				$this->Croogo->redirect(array('action' => 'edit', $Node->id));
-			} else {
-				$this->Session->setFlash(__d('croogo', '%s could not be saved. Please, try again.', $type['Type']['title']), 'flash', array('class' => 'error'));
-			}
+			//debug($this->request->data);
+			//die;
+
+		if ($Node->saveNode2($this->request->data, $typeAlias)) {
+			Croogo::dispatchEvent('Controller.Nodes.afterAdd', $this, array('data' => $this->request->data));
+			$this->Session->setFlash(__d('croogo', '%s has been saved', $type['Type']['title']), 'flash', array('class' => 'success'));
+			$this->Croogo->redirect(array('action' => 'edit', $Node->id));
+		} else {
+			$this->Session->setFlash(__d('croogo', '%s could not be saved. Please, try again.', $type['Type']['title']), 'flash', array('class' => 'error'));
+		}
 		} else {
 			$this->Croogo->setReferer();
 			$this->request->data[$Node->alias]['user_id'] = $this->Session->read('Auth.User.id');

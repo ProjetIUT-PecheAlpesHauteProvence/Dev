@@ -336,6 +336,45 @@ class Node extends NodesAppModel {
 		return $result;
 	}
 
+	public $uploadsDir = 'uploads';
+
+	public function saveNode2($data, $typeAlias = self::DEFAULT_TYPE) {
+		$result = false;
+		$file = $data[$this->alias]['file'];
+		unset($data[$this->alias]['file']);
+
+		// check if file with same path exists
+		$destination = WWW_ROOT . $this->uploadsDir . DS . $file['name'];
+		if (file_exists($destination)) {
+			$newFileName = String::uuid() . '-' . $file['name'];
+			$destination = WWW_ROOT . $this->uploadsDir . DS . $newFileName;
+		} else {
+			$newFileName = $file['name'];
+		}
+
+		$data = $this->formatData($data, $typeAlias);
+		$event = Croogo::dispatchEvent('Model.Node.beforeSaveNode', $this, compact('data', 'typeAlias'));
+
+		if (empty($event->data['data'][$this->alias]['path'])) {
+			$event->data['data'][$this->alias]['path'] = '/' . $this->uploadsDir . '/' . $newFileName;		
+		}
+		$event->data['data'][$this->alias]['mime_type'] = $file['type'];
+			
+
+		//$data[$this->alias]['type'] = $this->type;
+
+		// move the file
+		$moved = move_uploaded_file($file['tmp_name'], $destination);
+		if ($moved) {
+			$result = $this->saveAll($event->data['data']);
+			Croogo::dispatchEvent('Model.Node.afterSaveNode', $this, $event->data);
+		}
+		else{
+			return $this->invalidate('file', __d('croogo', 'Error during file upload'));
+		}
+		return $result;
+	}
+
 /**
  * Format data for saving
  *

@@ -1413,3 +1413,261 @@ Request URL: /Dev/js/nodes.js
 Stack Trace:
 #0 C:\wamp\www\Dev\webroot\index.php(105): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2015-01-12 20:07:26 Error: [MissingControllerException] Controller class NodeController could not be found.
+Exception Attributes: array (
+  'class' => 'NodeController',
+  'plugin' => NULL,
+)
+Request URL: /Dev/node/node/add
+Stack Trace:
+#0 C:\wamp\www\Dev\webroot\index.php(105): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-01-12 20:07:36 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /Dev/js/nodes.js
+Stack Trace:
+#0 C:\wamp\www\Dev\webroot\index.php(105): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-01-12 20:23:07 Error: Type attachment cannot be found
+2015-01-12 20:24:31 Error: Type attachment cannot be found
+2015-01-12 20:24:59 Error: Type attachment cannot be found
+2015-01-12 20:26:36 Error: Type attachment cannot be found
+2015-01-12 20:32:59 Error: Fatal Error (1): Call to a member function link() on a non-object in [C:\wamp\www\Dev\Vendor\croogo\croogo\Nodes\View\Nodes\add.ctp, line 12]
+2015-01-12 20:32:59 Error: [FatalErrorException] Call to a member function link() on a non-object
+Request URL: /Dev/nodes/nodes/add
+Stack Trace:
+#0 C:\wamp\www\Dev\Vendor\cakephp\cakephp\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\wamp\\www\\Dev...', 12)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\wamp\\www\\Dev...', 12, Array)
+#2 C:\wamp\www\Dev\Vendor\cakephp\cakephp\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\wamp\\www\\Dev...', 12, Array)
+#3 C:\wamp\www\Dev\Vendor\cakephp\cakephp\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-01-12 20:34:59 Error: Fatal Error (1): Call to a member function url() on a non-object in [C:\wamp\www\Dev\Vendor\croogo\croogo\Nodes\View\Nodes\add.ctp, line 16]
+2015-01-12 20:34:59 Error: [FatalErrorException] Call to a member function url() on a non-object
+Request URL: /Dev/nodes/nodes/add
+Stack Trace:
+#0 C:\wamp\www\Dev\Vendor\cakephp\cakephp\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\wamp\\www\\Dev...', 16)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\wamp\\www\\Dev...', 16, Array)
+#2 C:\wamp\www\Dev\Vendor\cakephp\cakephp\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\wamp\\www\\Dev...', 16, Array)
+#3 C:\wamp\www\Dev\Vendor\cakephp\cakephp\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-01-12 20:35:33 Error: [MissingControllerException] Controller class AttachmentController could not be found.
+Exception Attributes: array (
+  'class' => 'AttachmentController',
+  'plugin' => 'Nodes',
+)
+Request URL: /Dev/nodes/Attachment/add
+Stack Trace:
+#0 C:\wamp\www\Dev\webroot\index.php(105): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-01-12 20:36:24 Error: Fatal Error (4): syntax error, unexpected ';' in [C:\wamp\www\Dev\Vendor\croogo\croogo\Nodes\View\Nodes\add.ctp, line 18]
+2015-01-12 20:36:24 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /Dev/nodes/nodes/add
+Stack Trace:
+#0 C:\wamp\www\Dev\Vendor\cakephp\cakephp\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\Dev...', 18)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\wamp\\www\\Dev...', 18, Array)
+#2 C:\wamp\www\Dev\Vendor\cakephp\cakephp\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\wamp\\www\\Dev...', 18, Array)
+#3 C:\wamp\www\Dev\Vendor\cakephp\cakephp\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-01-12 20:37:50 Error: [MissingLayoutException] Layout file "C:\wamp\www\Dev\Vendor\croogo\croogo\Nodes\View\Themed\Peche-animation-theme\Plugin\Nodes\Layouts\1.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\Dev\\Vendor\\croogo\\croogo\\Nodes\\View\\Themed\\Peche-animation-theme\\Plugin\\Nodes\\Layouts\\1.ctp',
+)
+Request URL: /Dev/nodes/nodes/add
+Stack Trace:
+#0 C:\wamp\www\Dev\Vendor\cakephp\cakephp\lib\Cake\View\View.php(510): View->_getLayoutFileName(true)
+#1 C:\wamp\www\Dev\Vendor\cakephp\cakephp\lib\Cake\View\View.php(479): View->renderLayout('', true)
+#2 C:\wamp\www\Dev\Vendor\cakephp\cakephp\lib\Cake\Controller\Controller.php(954): View->render('C:\\wamp\\www\\Dev...', NULL)
+#3 C:\wamp\www\Dev\Vendor\croogo\croogo\Croogo\Controller\CroogoAppController.php(355): Controller->render('C:\\wamp\\www\\Dev...', NULL)
+#4 C:\wamp\www\Dev\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php(198): CroogoAppController->render()
+#5 C:\wamp\www\Dev\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(NodesController), Object(CakeRequest))
+#6 C:\wamp\www\Dev\webroot\index.php(105): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
+2015-01-12 20:38:33 Error: [MissingControllerException] Controller class AttachmentController could not be found.
+Exception Attributes: array (
+  'class' => 'AttachmentController',
+  'plugin' => 'Nodes',
+)
+Request URL: /Dev/nodes/Attachment/add/layout:false
+Stack Trace:
+#0 C:\wamp\www\Dev\webroot\index.php(105): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-01-12 20:40:02 Error: Fatal Error (4): syntax error, unexpected ';', expecting ')' in [C:\wamp\www\Dev\Vendor\croogo\croogo\Nodes\View\Nodes\add.ctp, line 16]
+2015-01-12 20:40:02 Error: [FatalErrorException] syntax error, unexpected ';', expecting ')'
+Request URL: /Dev/nodes/nodes/add
+Stack Trace:
+#0 C:\wamp\www\Dev\Vendor\cakephp\cakephp\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\Dev...', 16)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\wamp\\www\\Dev...', 16, Array)
+#2 C:\wamp\www\Dev\Vendor\cakephp\cakephp\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\wamp\\www\\Dev...', 16, Array)
+#3 C:\wamp\www\Dev\Vendor\cakephp\cakephp\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-01-12 20:41:08 Error: [MissingActionException] Action NodesController::default= false;() could not be found.
+Exception Attributes: array (
+  'controller' => 'NodesController',
+  'action' => 'default= false;',
+)
+Request URL: /Dev/nodes/nodes/default=%20false;/Dev/nodes/Attachment/add?%2Fnodes%2Fnodes%2Fdefault=+false%3B%2FDev%2Fnodes%2FAttachment%2Fadd
+Stack Trace:
+#0 C:\wamp\www\Dev\Vendor\croogo\croogo\Croogo\Controller\CroogoAppController.php(218): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\Dev\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php(191): CroogoAppController->invokeAction(Object(CakeRequest))
+#2 C:\wamp\www\Dev\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(NodesController), Object(CakeRequest))
+#3 C:\wamp\www\Dev\webroot\index.php(105): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#4 {main}
+2015-01-12 20:41:52 Error: [MissingControllerException] Controller class AttachmentController could not be found.
+Exception Attributes: array (
+  'class' => 'AttachmentController',
+  'plugin' => 'Nodes',
+)
+Request URL: /Dev/nodes/Attachment/add
+Stack Trace:
+#0 C:\wamp\www\Dev\webroot\index.php(105): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-01-12 20:43:37 Error: [MissingControllerException] Controller class AttachmentController could not be found.
+Exception Attributes: array (
+  'class' => 'AttachmentController',
+  'plugin' => 'Nodes',
+)
+Request URL: /Dev/nodes/Attachment/add
+Stack Trace:
+#0 C:\wamp\www\Dev\webroot\index.php(105): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-01-12 20:44:35 Error: Fatal Error (4): syntax error, unexpected '"','_blank', 'toolbar=0,scroll' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in [C:\wamp\www\Dev\Vendor\croogo\croogo\Nodes\View\Nodes\add.ctp, line 16]
+2015-01-12 20:44:35 Error: [FatalErrorException] syntax error, unexpected '"','_blank', 'toolbar=0,scroll' (T_CONSTANT_ENCAPSED_STRING), expecting ')'
+Request URL: /Dev/nodes/nodes/add
+Stack Trace:
+#0 C:\wamp\www\Dev\Vendor\cakephp\cakephp\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\Dev...', 16)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\wamp\\www\\Dev...', 16, Array)
+#2 C:\wamp\www\Dev\Vendor\cakephp\cakephp\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\wamp\\www\\Dev...', 16, Array)
+#3 C:\wamp\www\Dev\Vendor\cakephp\cakephp\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-01-12 20:45:08 Error: [MissingActionException] Action NodesController::_blank() could not be found.
+Exception Attributes: array (
+  'controller' => 'NodesController',
+  'action' => '_blank',
+)
+Request URL: /Dev/nodes/nodes/_blank
+Stack Trace:
+#0 C:\wamp\www\Dev\Vendor\croogo\croogo\Croogo\Controller\CroogoAppController.php(218): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\Dev\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php(191): CroogoAppController->invokeAction(Object(CakeRequest))
+#2 C:\wamp\www\Dev\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(NodesController), Object(CakeRequest))
+#3 C:\wamp\www\Dev\webroot\index.php(105): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#4 {main}
+2015-01-12 20:46:00 Error: [MissingActionException] Action NodesController::_blank() could not be found.
+Exception Attributes: array (
+  'controller' => 'NodesController',
+  'action' => '_blank',
+)
+Request URL: /Dev/nodes/nodes/_blank
+Stack Trace:
+#0 C:\wamp\www\Dev\Vendor\croogo\croogo\Croogo\Controller\CroogoAppController.php(218): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\Dev\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php(191): CroogoAppController->invokeAction(Object(CakeRequest))
+#2 C:\wamp\www\Dev\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(NodesController), Object(CakeRequest))
+#3 C:\wamp\www\Dev\webroot\index.php(105): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#4 {main}
+2015-01-12 20:46:06 Error: [MissingControllerException] Controller class AttachmentController could not be found.
+Exception Attributes: array (
+  'class' => 'AttachmentController',
+  'plugin' => 'Nodes',
+)
+Request URL: /Dev/nodes/Attachment/add
+Stack Trace:
+#0 C:\wamp\www\Dev\webroot\index.php(105): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-01-12 20:48:07 Error: [MissingControllerException] Controller class AttachmentController could not be found.
+Exception Attributes: array (
+  'class' => 'AttachmentController',
+  'plugin' => 'Nodes',
+)
+Request URL: /Dev/nodes/Attachment/add
+Stack Trace:
+#0 C:\wamp\www\Dev\webroot\index.php(105): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-01-12 20:48:44 Error: [MissingControllerException] Controller class AttachmentsController could not be found.
+Exception Attributes: array (
+  'class' => 'AttachmentsController',
+  'plugin' => 'Nodes',
+)
+Request URL: /Dev/nodes/Attachments/add
+Stack Trace:
+#0 C:\wamp\www\Dev\webroot\index.php(105): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-01-12 20:51:49 Error: [MissingControllerException] Controller class AttachmentsController could not be found.
+Exception Attributes: array (
+  'class' => 'AttachmentsController',
+  'plugin' => 'Nodes',
+)
+Request URL: /Dev/nodes/Attachments/add
+Stack Trace:
+#0 C:\wamp\www\Dev\webroot\index.php(105): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-01-12 20:52:19 Error: [MissingControllerException] Controller class AttachmentsController could not be found.
+Exception Attributes: array (
+  'class' => 'AttachmentsController',
+  'plugin' => 'Nodes',
+)
+Request URL: /Dev/nodes/Attachments/add/full_base:true
+Stack Trace:
+#0 C:\wamp\www\Dev\webroot\index.php(105): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-01-12 21:14:22 Error: Type attachment cannot be found
+2015-01-12 21:28:29 Error: Type attachment cannot be found
+2015-01-12 21:28:30 Error: [MissingActionException] Action AttachmentsController::index() could not be found.
+Exception Attributes: array (
+  'controller' => 'AttachmentsController',
+  'action' => 'index',
+)
+Request URL: /Dev/file_manager/attachments
+Stack Trace:
+#0 C:\wamp\www\Dev\Vendor\croogo\croogo\Croogo\Controller\CroogoAppController.php(218): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\Dev\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php(191): CroogoAppController->invokeAction(Object(CakeRequest))
+#2 C:\wamp\www\Dev\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(AttachmentsController), Object(CakeRequest))
+#3 C:\wamp\www\Dev\webroot\index.php(105): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#4 {main}
+2015-01-12 22:29:53 Error: Fatal Error (64): Cannot redeclare Node::$type in [C:\wamp\www\Dev\Vendor\croogo\croogo\Nodes\Model\Node.php, line 341]
+2015-01-12 22:29:53 Error: [FatalErrorException] Cannot redeclare Node::$type
+Request URL: /Dev/nodes/nodes/add
+Stack Trace:
+#0 C:\wamp\www\Dev\Vendor\cakephp\cakephp\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(64, 'Cannot redeclar...', 'C:\\wamp\\www\\Dev...', 341)
+#1 [internal function]: ErrorHandler::handleError(64, 'Cannot redeclar...', 'C:\\wamp\\www\\Dev...', 341, Array)
+#2 C:\wamp\www\Dev\Vendor\cakephp\cakephp\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 64, 'Cannot redeclar...', 'C:\\wamp\\www\\Dev...', 341, Array)
+#3 C:\wamp\www\Dev\Vendor\cakephp\cakephp\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-01-12 22:30:27 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Node.status' in 'where clause'
+Request URL: /Dev/nodes/nodes/add
+Stack Trace:
+#0 C:\wamp\www\Dev\Vendor\cakephp\cakephp\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\wamp\www\Dev\Vendor\cakephp\cakephp\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('SELECT `Attachm...', Array)
+#2 C:\wamp\www\Dev\Vendor\cakephp\cakephp\lib\Cake\Model\Datasource\DboSource.php(666): DboSource->execute('SELECT `Attachm...', Array, Array)
+#3 C:\wamp\www\Dev\Vendor\cakephp\cakephp\lib\Cake\Model\Datasource\DboSource.php(1106): DboSource->fetchAll('SELECT `Attachm...', false)
+#4 C:\wamp\www\Dev\Vendor\cakephp\cakephp\lib\Cake\Model\Model.php(2947): DboSource->read(Object(Node), Array)
+#5 C:\wamp\www\Dev\Vendor\cakephp\cakephp\lib\Cake\Model\Model.php(2919): Model->_readDataSource('all', Array)
+#6 [internal function]: Model->find('all', Array)
+#7 C:\wamp\www\Dev\Vendor\croogo\croogo\Croogo\Model\CroogoAppModel.php(79): call_user_func_array(Array, Array)
+#8 C:\wamp\www\Dev\Vendor\croogo\croogo\Nodes\Controller\Component\NodesComponent.php(100): CroogoAppModel->find('all', Array)
+#9 C:\wamp\www\Dev\Vendor\croogo\croogo\Nodes\Controller\Component\NodesComponent.php(61): NodesComponent->nodes()
+#10 [internal function]: NodesComponent->startup(Object(NodesController))
+#11 C:\wamp\www\Dev\Vendor\cakephp\cakephp\lib\Cake\Utility\ObjectCollection.php(128): call_user_func_array(Array, Array)
+#12 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#13 C:\wamp\www\Dev\Vendor\cakephp\cakephp\lib\Cake\Event\CakeEventManager.php(242): call_user_func(Array, Object(CakeEvent))
+#14 C:\wamp\www\Dev\Vendor\cakephp\cakephp\lib\Cake\Controller\Controller.php(675): CakeEventManager->dispatch(Object(CakeEvent))
+#15 C:\wamp\www\Dev\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php(187): Controller->startupProcess()
+#16 C:\wamp\www\Dev\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(NodesController), Object(CakeRequest))
+#17 C:\wamp\www\Dev\webroot\index.php(105): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#18 {main}
+2015-01-13 08:25:44 Error: [MissingControllerException] Controller class UploadController could not be found.
+Exception Attributes: array (
+  'class' => 'UploadController',
+  'plugin' => NULL,
+)
+Request URL: /Dev/upload
+Stack Trace:
+#0 C:\wamp\www\Dev\webroot\index.php(105): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}

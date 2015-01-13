@@ -260,15 +260,15 @@ class AttachmentsController extends FileManagerAppController {
 		}
 
 		if ($this->request->is('post') || !empty($this->request->data)) {
-
 			if (empty($this->request->data['Attachment'])) {
 				$this->Attachment->invalidate('file', __d('croogo', 'Upload failed. Please ensure size does not exceed the server limit.'));
 				return;
 			}
-			// les reidrect a modifier
+			// les redirect a modifier
 			$this->Attachment->create();
 			if ($this->Attachment->save($this->request->data)) {
 
+				$this->Session->write('picturename', $this->request->data['Attachment']['file']['name'] );
 				$this->Session->setFlash(__d('croogo', 'The Attachment has been saved'), 'flash', array('class' => 'success'));
 
 				if (isset($this->request->params['named']['editor'])) {

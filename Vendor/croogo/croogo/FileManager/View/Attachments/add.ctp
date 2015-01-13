@@ -6,4 +6,4 @@ echo $this->Form->input('file', array(
 			'type' => 'file',
 			'label' => __d('croogo', 'Upload'),
 		));
-echo $this->Form->end('Ajouter');
+echo $this->Form->end('Ajouter'); 
