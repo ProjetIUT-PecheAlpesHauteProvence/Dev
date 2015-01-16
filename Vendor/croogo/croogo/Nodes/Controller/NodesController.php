@@ -812,8 +812,9 @@ class NodesController extends NodesAppController {
 		$this->set(compact('parentTitle', 'roles'));
 	}
 
-// publication de post avec image
+// publication de post avec insertion d'une image
 	public function add($typeAlias = 'node') {
+		
 		$Node = $this->{$this->modelClass};
 		$type = $Node->Taxonomy->Vocabulary->Type->findByAlias($typeAlias);
 		if (!isset($type['Type']['alias'])) {
@@ -824,11 +825,10 @@ class NodesController extends NodesAppController {
 			if (isset($this->request->data[$Node->alias]['type'])) {
 				$typeAlias = $this->request->data[$Node->alias]['type'];
 				$Node->type = $typeAlias;
-			}
-			//debug($this->request->data);
-			//die;
-
-		if ($Node->saveNode2($this->request->data, $typeAlias)) {
+		}
+		//debug($this->request->data);
+		//die;
+		if ($Node->saveNodeUser($this->request->data, $typeAlias)) {
 			Croogo::dispatchEvent('Controller.Nodes.afterAdd', $this, array('data' => $this->request->data));
 			$this->Session->setFlash(__d('croogo', '%s has been saved', $type['Type']['title']), 'flash', array('class' => 'success'));
 			$this->Croogo->redirect(array('action' => 'edit', $Node->id));
@@ -844,7 +844,7 @@ class NodesController extends NodesAppController {
 		$Node->type = $type['Type']['alias'];
 		$Node->Behaviors->attach('Tree', array(
 			'scope' => array(
-				$Node->escapeField('type') => $Node->type,
+				$Node->escapeField('type') => $Node->type, 
 			),
 		));
 

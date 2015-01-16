@@ -338,40 +338,58 @@ class Node extends NodesAppModel {
 
 	public $uploadsDir = 'uploads';
 
-	public function saveNode2($data, $typeAlias = self::DEFAULT_TYPE) {
+	public function saveNodeUser($data, $typeAlias = self::DEFAULT_TYPE) {
+		
+		// verifier les exptensions des images
 		$result = false;
+
+		// on élimine le champ file car la base n'a pas de champ file
 		$file = $data[$this->alias]['file'];
-		unset($data[$this->alias]['file']);
+		unset($data[$this->alias]['file']); 
 
-		// check if file with same path exists
-		$destination = WWW_ROOT . $this->uploadsDir . DS . $file['name'];
-		if (file_exists($destination)) {
-			$newFileName = String::uuid() . '-' . $file['name'];
-			$destination = WWW_ROOT . $this->uploadsDir . DS . $newFileName;
-		} else {
-			$newFileName = $file['name'];
-		}
-
+		// a vérifier
 		$data = $this->formatData($data, $typeAlias);
+		// trigger déclenché avant l'enregistrement de la node
 		$event = Croogo::dispatchEvent('Model.Node.beforeSaveNode', $this, compact('data', 'typeAlias'));
 
-		if (empty($event->data['data'][$this->alias]['path'])) {
-			$event->data['data'][$this->alias]['path'] = '/' . $this->uploadsDir . '/' . $newFileName;		
-		}
-		$event->data['data'][$this->alias]['mime_type'] = $file['type'];
+		debug($data);
+		die;
+
+		// on verifie que l'utilisateur a bien joint une image
+		if($file['name'] != ''){
+			// definition du fichier de destination et du nom du fichier avec verification de doublons
+			// check if file with same path exists
+			$destination = WWW_ROOT . $this->uploadsDir . DS . $file['name'];
 			
+			// si doublons on change le nom
+			if (file_exists($destination)) {
+				$newFileName = String::uuid() . '-' . $file['name'];
+				$destination = WWW_ROOT . $this->uploadsDir . DS . $newFileName;
+			} else {
+				$newFileName = $file['name'];
+			}
 
-		//$data[$this->alias]['type'] = $this->type;
-
-		// move the file
-		$moved = move_uploaded_file($file['tmp_name'], $destination);
-		if ($moved) {
-			$result = $this->saveAll($event->data['data']);
-			Croogo::dispatchEvent('Model.Node.afterSaveNode', $this, $event->data);
+			// ajout du path du fichier dans les données a enregistrer 
+			$event->data['data'][$this->alias]['path'] = '/' . $this->uploadsDir . '/' . $newFileName;		
+			$event->data['data'][$this->alias]['mime_type'] = $file['type']; // renseigne le champ mime_type de la base
+			
+			// move the file
+			$moved = move_uploaded_file($file['tmp_name'], $destination);
+			if (!$moved) {
+				return $this->invalidate('file', __d('croogo', 'Error during file upload'));
+			}
 		}
+		//sinon c'est une node normale
 		else{
-			return $this->invalidate('file', __d('croogo', 'Error during file upload'));
+			if (empty($event->data['data'][$this->alias]['path'])) {
+				$event->data['data'][$this->alias]['path'] = $this->_getNodeRelativePath($event->data['data']);
+			}
 		}
+
+		// enregistre tous les champs
+		$result = $this->saveAll($event->data['data']);
+		Croogo::dispatchEvent('Model.Node.afterSaveNode', $this, $event->data);
+		
 		return $result;
 	}
 
@@ -384,6 +402,29 @@ class Node extends NodesAppModel {
  * @throws InvalidArgumentException
  */
 	public function formatData($data, $typeAlias = self::DEFAULT_TYPE) {
+		$roles = $type = array();
+
+		if (!array_key_exists($this->alias, $data)) {
+			$data = array($this->alias => $data);
+		} else {
+			$data = $data;
+		}
+
+		if (!array_key_exists('Role', $data) || empty($data['Role']['Role'])) {
+			$roles = '';
+		} else {
+			$roles = $data['Role']['Role'];
+		}
+
+		$data[$this->alias]['visibility_roles'] = $this->encodeData($roles);
+
+		return $data;
+	}
+
+	App::import('Sanitize');
+
+	public function formatDataUser($data, $typeAlias = self::DEFAULT_TYPE) {
+		
 		$roles = $type = array();
 
 		if (!array_key_exists($this->alias, $data)) {
