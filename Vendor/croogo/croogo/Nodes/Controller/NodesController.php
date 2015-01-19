@@ -812,7 +812,13 @@ class NodesController extends NodesAppController {
 		$this->set(compact('parentTitle', 'roles'));
 	}
 
-// publication de post avec insertion d'une image
+/**
+ * ser add
+ *
+ * @param string $typeAlias
+ * @return void
+ * @access public
+ */
 	public function add($typeAlias = 'node') {
 		
 		$Node = $this->{$this->modelClass};

@@ -21,8 +21,6 @@
 
 		echo $this->html->link('S\'enregistrer' , array('plugin' => 'users', 'controller' => 'users', 'action' => 'add'));
 		echo $this->html->link('Forgot' , array('plugin' => 'users', 'controller' => 'users', 'action' => 'forgot'));
-		
-		
 	?>
 
 	<div class="paging"><?php echo $this->Paginator->numbers(); ?></div>

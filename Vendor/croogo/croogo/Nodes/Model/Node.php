@@ -337,6 +337,14 @@ class Node extends NodesAppModel {
 	}
 
 	public $uploadsDir = 'uploads';
+	
+/**
+ * Create/update a Node record for users
+ *
+ * @param $data array Node data
+ * @param $typeAlias string Node type alias
+ * @return mixed see Model::saveAll()
+ */
 
 	public function saveNodeUser($data, $typeAlias = self::DEFAULT_TYPE) {
 		
@@ -348,25 +356,37 @@ class Node extends NodesAppModel {
 		unset($data[$this->alias]['file']); 
 
 		// a vérifier
-		$data = $this->formatData($data, $typeAlias);
+		$data = $this->formatDataUser($data, $typeAlias);
 		// trigger déclenché avant l'enregistrement de la node
 		$event = Croogo::dispatchEvent('Model.Node.beforeSaveNode', $this, compact('data', 'typeAlias'));
 
-		debug($data);
-		die;
+		//debug($data);
+		//die;
 
 		// on verifie que l'utilisateur a bien joint une image
 		if($file['name'] != ''){
+			
+			// vérification extension, /!\ verifier avec le mime type
+			$extension_allowed = array('image/jpg','image/png', 'image/jpeg' , 'image/gif');
+			if(!in_array($file['type'], $extension_allowed))
+			{
+				return $this->invalidate('file', __d('croogo', 'file type not allowed, allowed types are : jpg,png,jpeg or gif' ));
+			}
+			
+			$file_extension = substr(strrchr($file['name'],"."), 1);
+
+
+
 			// definition du fichier de destination et du nom du fichier avec verification de doublons
-			// check if file with same path exists
-			$destination = WWW_ROOT . $this->uploadsDir . DS . $file['name'];
+			$destination = WWW_ROOT . $this->uploadsDir . DS . md5($file['name']) . '.' . $file_extension;
 			
 			// si doublons on change le nom
 			if (file_exists($destination)) {
-				$newFileName = String::uuid() . '-' . $file['name'];
-				$destination = WWW_ROOT . $this->uploadsDir . DS . $newFileName;
+				//$newFileName = String::uuid() . '-' . $file['name'];
+				$newFileName = md5($file['name']) . time() . '.' . $file_extension;
+				$destination = WWW_ROOT . $this->uploadsDir . DS . $newFileName . '.' . $file_extension;
 			} else {
-				$newFileName = $file['name'];
+				$newFileName = md5($file['name']) . '.' . $file_extension;
 			}
 
 			// ajout du path du fichier dans les données a enregistrer 
@@ -421,12 +441,18 @@ class Node extends NodesAppModel {
 		return $data;
 	}
 
-	App::import('Sanitize');
-
+/**
+ * Format data for saving for users
+ *
+ * @param array $data Node and related data, eg Taxonomy and Role
+ * @param string $typeAlias string Node type alias
+ * @return array formatted data
+ * @throws InvalidArgumentException
+ */
 	public function formatDataUser($data, $typeAlias = self::DEFAULT_TYPE) {
 		
 		$roles = $type = array();
-
+		// 
 		if (!array_key_exists($this->alias, $data)) {
 			$data = array($this->alias => $data);
 		} else {
@@ -441,8 +467,15 @@ class Node extends NodesAppModel {
 
 		$data[$this->alias]['visibility_roles'] = $this->encodeData($roles);
 
+		//verfication des champs
+		$data[$this->alias]['title'] = strip_tags($data[$this->alias]['title']);
+		$data[$this->alias]['slug'] = strip_tags($data[$this->alias]['slug']);
+		$data[$this->alias]['body'] = strip_tags($data[$this->alias]['body']);
+
+
 		return $data;
 	}
+
 
 /**
  * Update values for all nodes 'path' field

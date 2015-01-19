@@ -16,7 +16,7 @@
         $this->Layout->setNode($node);
         ?>
         <div id="node-<?php echo $this->Layout->node('id'); ?>" class="node node-type-<?php echo $this->Layout->node('type'); ?>">
-            <h3><?php echo $this->Html->link($this->Layout->node('title'), $this->Layout->node('url')); ?> 
+            <h3><?php //echo $this->Html->link($this->Layout->node('title'), $this->Layout->node('url')); ?> 
                 <small><?php echo $this->Layout->nodeInfo(); ?></small>
             </h3>
            <div class="well-small">
